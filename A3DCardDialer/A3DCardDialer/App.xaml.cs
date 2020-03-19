@@ -10,7 +10,8 @@ namespace A3DCardDialer
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new TbMainPage());
+                       
         }
 
         protected override void OnStart()

@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
-    <ApplicationIcon>A3D.ico</ApplicationIcon>
+    <ApplicationIcon>image\A3D.ico</ApplicationIcon>
     <Authors>Arnika Technologies</Authors>
     <Company>Arnika Technologies</Company>
     <Copyright>@Arnika Technologies</Copyright>
@@ -15,7 +15,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="image\A3D.ico" />
+    <None Remove="image\imgUsers.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="image\A3D.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="image\imgUsers.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CtCall.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TbMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

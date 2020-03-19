@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:A3DCardDialer"
+             mc:Ignorable="d"
+                         x:Class="A3DCardDialer.TbMainPage">
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text=".."></ToolbarItem>
+        <ToolbarItem Text="Share"></ToolbarItem>
+        <ToolbarItem Text="About Us"></ToolbarItem>
+    </TabbedPage.ToolbarItems>
+    <ContentPage Title="Call" >
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Enter Number With Country Code" Grid.Row="0"/>
+
+            <Entry x:Name="TxtCall" Placeholder="Enter Number to Call" TextColor="Blue" Grid.Column="0" Grid.Row="1" IsEnabled="True" PlaceholderColor="#E647DD" Keyboard="Numeric"/>
+            <ImageButton HorizontalOptions="Center" VerticalOptions="Center" BorderWidth="3" Grid.Column="1" Grid.Row="1" 
+                       Source="{local:ImageResource A3DCardDialer.image.imgUsers.png}" Aspect="Fill" 
+                        />
+        </Grid>
+
+    </ContentPage>
+    <ContentPage Title="History" >
+        <Entry x:Name="Txthistory" Placeholder="His"></Entry>
+    </ContentPage>
+    <ContentPage Title="Favourites" >
+        <Entry x:Name="Txtfa" Placeholder="Fab"></Entry>
+    </ContentPage>
+    <ContentPage Title="Settings" >
+        <Entry x:Name="Txtset" Placeholder="Settings"></Entry>
+    </ContentPage>
+</TabbedPage>
